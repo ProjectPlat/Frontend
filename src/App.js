@@ -1,5 +1,5 @@
 import './App.css';
-import NavBar from './Components/NavBar/NavBar.jsx';
+import NavBar from './Components/NavBar/NavBar';
 import Header from './Components/Header/Header';
 
 

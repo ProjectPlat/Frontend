@@ -29,7 +29,7 @@ function NavBar () {
                     justifyContent: 'flex-end',
                 }}>
                     <Button variant="outlined">Log in</Button>
-                    <Button variant="contained">Register</Button> 
+                    <Button variant="contained">Register</Button>  
                 </Box>
             </Toolbar>        
         </AppBar>
