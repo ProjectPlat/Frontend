@@ -1,6 +1,6 @@
 import './App.css';
-import NavBar from './Components/NavBar/NavBar';
 import Header from './Components/Header/Header';
+import NavBar from './Components/NavBar/NavBar';
 
 
 function App() {
@@ -11,5 +11,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
