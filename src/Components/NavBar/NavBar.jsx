@@ -9,7 +9,7 @@ import logo from './settings.png'
 
 function NavBar () {
     return (
-        <AppBar position="static" style={{backgroundColor: 'tomatoe'}}>
+        <AppBar position="static" style={{backgroundColor: 'white'}}>
             <Toolbar>
                 <Box sx={{
                     width: '10%',
