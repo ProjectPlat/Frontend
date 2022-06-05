@@ -1,0 +1,7 @@
+.sampleContainer {
+    width: 100vp;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
