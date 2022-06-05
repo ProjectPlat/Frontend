@@ -1,14 +1,14 @@
 import React from 'react';
-import './SampleContainer.css'
+import './Header.css'
 
-function SampleContainer () {
+function Header () {
     return (
         <div className='sampleContainer'>
-            <h3>
+            <h1>
                 Sample amazing text
-            </h3>
+            </h1>
         </div>
     )
 }
 
-export default SampleContainer;
+export default Header;
