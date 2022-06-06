@@ -6,7 +6,6 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import logo from './settings.png'
 
-
 function NavBar () {
     return (
         <AppBar position="static" style={{backgroundColor: 'white'}}>
