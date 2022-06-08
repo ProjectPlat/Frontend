@@ -7,7 +7,7 @@ import { v4 as uuid } from 'uuid';
 function App() {
 
   const session_id = uuid();
-  console.log('session_id:', session_id);
+  console.log(session_id);
 
   return (
     <div className="App"> 
