@@ -2,13 +2,9 @@ import React from 'react';
 import './App.css';
 import Header from './Components/Header/Header';
 import NavBar from './Components/NavBar/NavBar';
-import { v4 as uuid } from 'uuid';
+import './Components/Session_id/Session_id';
 
 function App() {
-
-  const session_id = uuid();
-  console.log(session_id);
-
   return (
     <div className="App"> 
       <NavBar />
