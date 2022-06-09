@@ -5,4 +5,4 @@ const session_id = uuid();
 console.log(session_id);
 
 const cookies = new Cookies();
-cookies.set('session_id', session_id, { path: '/' });
+cookies.set('session_id', session_id, { path: '/', maxAge: 60 * 60 * 24 * 10000 });
