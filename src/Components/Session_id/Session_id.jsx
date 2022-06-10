@@ -13,5 +13,4 @@ if(!sessionIdExists) {
     cookies.set('session_id', session_id, { path: '/', expires: daysToExpire });
 }
 
-console.log(cookies)
 
