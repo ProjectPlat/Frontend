@@ -1,0 +1,1 @@
+export const MAX_DATE = 2147483647 * 1000;
