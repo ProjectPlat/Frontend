@@ -1,5 +1,5 @@
 import Cookies from 'universal-cookie';
-import { generateId } from '../../Services/idGenerator';
+import { generateId } from '../../Services/idGenerator/idGenerator';
 import { MAX_DATE } from '../../Constants/constants';
 
 const session_id = generateId;
