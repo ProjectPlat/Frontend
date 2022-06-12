@@ -9,8 +9,8 @@ function App() {
   return (
     <div className="App"> 
       <NavBar />
-        <button onClick={methodDoesNotExist}>Break the world</button>;
       <Header />
+      <button onClick={ErrorSentryTest}>Break the world</button>
     </div>
   );
 }
