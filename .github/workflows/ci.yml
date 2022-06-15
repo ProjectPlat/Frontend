@@ -7,6 +7,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps: 
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
       - uses: actions/checkout@v1
       - name: push to server
         uses: appleboy/ssh-action@master 
@@ -14,4 +18,4 @@ jobs:
           host: ${{ secrets.server_ip }}
           username: ${{ secrets.server_username }}
           password: ${{ secrets.server_password }}
-          script: cd ${{ secrets.project_path }} && git pull && npm i && npm run build && sudo systemctl restart nginx
+          script: cd ${{ secrets.project_path }} && git checkout ${{ steps.extract_branch.outputs.branch }} && git pull && npm i && npm run build && sudo systemctl restart nginx
