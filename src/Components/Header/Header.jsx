@@ -5,7 +5,7 @@ function Header () {
     return (
         <div className='sampleContainer'>
             <h1>
-                Sample amazing text
+                Sample amazing text --------- CAT
             </h1>
         </div>
     )
