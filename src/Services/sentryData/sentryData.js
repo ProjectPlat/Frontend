@@ -4,4 +4,4 @@ import { sessionId, loggedIn } from '../SessionId/sessionId';
 Sentry.setContext("User", {
     loggedIn: loggedIn,
     sessionId: sessionId,
-  });
+});
