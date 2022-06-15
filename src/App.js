@@ -6,15 +6,10 @@ import NavBar from './Components/NavBar/NavBar';
 
 function App() {
 
-  const ErrorSentryTest = () => {
-      throw new Error('LOS UNICORNIOS NO EXISTEN');
-  }
-
   return (
     <div className="App"> 
       <NavBar />
       <Header />
-      <button onClick={ErrorSentryTest}>Break the world</button>
     </div>
   );
 }
