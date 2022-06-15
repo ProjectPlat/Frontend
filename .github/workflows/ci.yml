@@ -18,4 +18,4 @@ jobs:
           host: ${{ secrets.server_ip }}
           username: ${{ secrets.server_username }}
           password: ${{ secrets.server_password }}
-          script: cd ${{ secrets.project_path }} && git checkout ${{ steps.extract_branch.outputs.branch }} && git pull && npm i && npm run build && sudo systemctl restart nginx
+          script: cd ${{ secrets.project_path }} && git fetch && git checkout ${{ steps.extract_branch.outputs.branch }} && git pull && npm i && npm run build && sudo systemctl restart nginx
