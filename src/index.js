@@ -7,6 +7,8 @@ import './Services/SessionId/SessionId'
 import * as Sentry from "@sentry/react";
 import { BrowserTracing } from "@sentry/tracing";
 import Cookies from 'universal-cookie';
+import cookieRepository from './Infrastructure/Repositories/Cookies/CookieRepository';
+import { COOKIE_SESSION_NAME } from './Constants/constants';
 
 function segment() {
   var analytics = window.analytics = window.analytics || [];
@@ -36,7 +38,7 @@ function segment() {
     analytics.load("MNpNGcIT8GgMOvqoKiFAYPvLJy54bU7s");
     
     const cookies = new Cookies();
-    const session_id = cookies.get('session_id') 
+    const session_id = cookies.get(COOKIE_SESSION_NAME) 
     analytics.page('Page View Home', {
         Logged: false,
         SessionId: `${session_id}`
@@ -51,7 +53,7 @@ Sentry.init({
   tracesSampleRate: 1.0,
 });
 
-const userSession = localStorage.getItem('sessionId');
+const userSession = cookieRepository.get(COOKIE_SESSION_NAME);
 Sentry.setContext("User", {
   loggedIn: false,
   sessionId: userSession,

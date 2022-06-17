@@ -1,15 +1,17 @@
-import Cookies from 'universal-cookie';
-
+import cookieRepository from '../../Infrastructure/Repositories/Cookies/CookieRepository';
 import { generateId } from '../idGenerator/idGenerator';
-import { MAX_DATE } from '../../Constants/constants';
+import { MAX_DATE, COOKIE_SESSION_NAME } from '../../Constants/constants';
 
 const daysToExpire = new Date(MAX_DATE);
 
-const cookies = new Cookies();
-const sessionIdExists = cookies.get('session_id') 
+const sessionIdExists = cookieRepository.get(COOKIE_SESSION_NAME);
 
-if(!sessionIdExists) {
+if (!sessionIdExists) {
     const session_id = generateId;
-    cookies.set('session_id', session_id, { path: '/', expires: daysToExpire }); 
-    localStorage.sessionId = session_id
+
+    cookieRepository.save({
+        expiration: daysToExpire,
+        name: COOKIE_SESSION_NAME,
+        value: session_id
+    });
 }
