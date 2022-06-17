@@ -34,7 +34,7 @@ function segment() {
     analytics._writeKey = "MNpNGcIT8GgMOvqoKiFAYPvLJy54bU7s";;
     analytics.SNIPPET_VERSION = "4.15.3";
     analytics.load("MNpNGcIT8GgMOvqoKiFAYPvLJy54bU7s");
-    analytics.page('Root', {
+    analytics.page('Page View Home', {
         Logged: ifUserIsLogged(),
         SessionId: `${session_id}`
       });
