@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import './Services/SessionId/SessionId'
 import * as Sentry from "@sentry/react";
 import { BrowserTracing } from "@sentry/tracing";
+import session_id, { ifUserIsLogged } from './Services/SessionId/SessionId';
 
 function segment() {
   var analytics = window.analytics = window.analytics || [];
@@ -33,8 +34,11 @@ function segment() {
     analytics._writeKey = "MNpNGcIT8GgMOvqoKiFAYPvLJy54bU7s";;
     analytics.SNIPPET_VERSION = "4.15.3";
     analytics.load("MNpNGcIT8GgMOvqoKiFAYPvLJy54bU7s");
-    analytics.page();
-  }
+    analytics.page('Root', {
+        Logged: ifUserIsLogged(),
+        SessionId: `${session_id}`
+      });
+    }
 }
 segment();
 
