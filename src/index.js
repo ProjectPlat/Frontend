@@ -41,7 +41,8 @@ function segment() {
     const session_id = cookies.get(COOKIE_SESSION_NAME) 
     analytics.page('Page View Home', {
         Logged: false,
-        SessionId: `${session_id}`
+        SessionId: `${session_id}`,
+        CurrentUrl: window.location.href
       });
     }
 }
